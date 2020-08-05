@@ -37,9 +37,15 @@
         margin: 10px;
         padding: 0px;
     }
+    #form{
+        background-color: rgb(10, 208, 112);
+    }
+    #body{
+        
+    }
 </style>
 
-<body>
+<body id="body">
     <div class="container">
         <div class="text-center mt-5">
             <img src="./img/logo.jpg" alt="" class="logo"> <br>
@@ -72,8 +78,9 @@
         <div class="row">
             <div class="col-2">
                 <p>ด้วยผู้ขับขี่</p>
+                <p class="md-1">Driver of:</p>
             </div>
-            <div class="col-2">
+            <div class="col-3">
                 <input type="checkbox">รถจักรยานยนต์
                 <p class="ml-3">Mortorcycle</p>
             </div>
@@ -93,7 +100,7 @@
         <div class="row">
             <div class="col-6 text-left">
                 <p>ยี่ห้อ</p>
-                <select name="Marque" id="Marque" class="form-control" required="">
+                <select name="Marque" id="Marque" class="form-control">
                     <option value="Nonec">BWM</option>
                     <option value="Volvo">Benz</option>
                     <option value="Saab">Lumborghini</option>
@@ -290,6 +297,7 @@
                 พ.ร.บ.จราจรทางบก(ฉบับที่ ๙)พ.ศ.๒๔๔฿ และมาตรา ๑๔๑ แห่ง พ.ร.บ.จราจรทางบก พ.ศ.๒๔๒๒
                 ซึ่งแก้ไขเพิ่มเติมโดยฉบับที่๑๑ พ.ศ.๒๕๕๖ ให้ผู้ขับขี่หรือเจ้าของรถหรือผู้ครอบครองรถ ไปชำระค่าปรับตาม
                 "ข้อกำหนดสำนักงานตำรวจแห่งชาติ"</p>
+                
             <div class="col-20">
                 <input type="checkbox">
                 ส่งทางไปรษณีย์พร้อมหลักฐานและให้เจ้าของรถหรือผู้ครอบครองรถไปชำระค่าปรับตามที่ระบุไว้ภายในสามสิบวันนับแต่วันที่ได้รับใบสั่ง
@@ -304,15 +312,15 @@
 
                     <div class="col-md-4 md3">
                         <label for="kk">ยศ</label>
-                        <input type="text" class="form-control" placeholder="Date">
+                        <input type="text" class="form-control" placeholder="Rank">
                     </div>
                     <div class="col-md-4 md3">
                         <label for="Road">ชื่อ</label>
-                        <input type="text" class="form-control" placeholder="Name">
+                        <input type="text" class="form-control" placeholder="Frist Name">
                     </div>
                     <div class="col-md-4 md3">
                         <label for="District">นามสกุล</label>
-                        <input type="text" class="form-control" placeholder="Year">
+                        <input type="text" class="form-control" placeholder="Last Name">
                     </div>
                 </div>
 
@@ -325,27 +333,111 @@
                 <div class="row">
                     <div class="col-md-3 md-3">
                         <label for="First">ชื่อ</label>
-                        <input type="text" class="form-control" id="First" placeholder="Frist Name " required="">
+                        <input type="text" class="form-control" placeholder="Frist Name " required="">
                     </div>
                     <div class="col-md-3 md-3">
                         <label for="Last">ชื่อสกุล</label>
-                        <input type="text" class="form-control" id="Last" placeholder="Last name" required="">
+                        <input type="text" class="form-control" placeholder="Last Name" required="">
                     </div>
                     <div class="col-md-6 md-3">
                         <label for="ID ">เลขบัตรประชาชน</label>
-                        <input type="number" class="form-control" id="ID " placeholder="ID No:" required="">
+                        <input type="number" class="form-control" placeholder="ID No:" required="">
                     </div>
-        
+
+                    <div class="col-md-6 md3">
+                        <label for="kk">ใบอนุญาติขับขี่</label>
+                        <label for="Alley">/ฉบับที่</label>
+                        <input type="number" class="form-control" placeholder="Driver's License No./Book No.">
+                    </div>
+                    <div class="col-md-6 md3">
+                        <label for="Road">วันอนุญาติขับขี่</label>
+                        <input type="number" class="form-control" placeholder="Date of issue">
+                    </div>
+
+                    <div class="col-2">
+                        <p>ออกให้โดยนายทะเบียน</p>
+                    </div>
+                    <div class="col-4 text-left">
+                        <hr>
+                        <p>จังหวัด</p>
+                        <select name="province" id="province" class="form-control" required="">
+                            <option value="mag">เชียงราย</option>
+                            <option value="chiangmai1">เชียงใหม่</option>
+                            <option value="chiangrai1">แม่ฮ่องสอน</option>
+                            <option value="mercedes1">ลำพูน</option>
+                            <option value="audi1">ลำปาง</option>
+                            <option value="toyota1">อุตรดิตถ์</option>
+                            <option value="isusu1">พะเยา</option>
+                            <option value="mg1">น่าน</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 md3">
+                        <hr>
+                        <label for="Road">วันอนุญาติขับขี่</label>
+                        <input type="number" class="form-control" placeholder="Date of issue">
+                    </div>
                 </div>
-                
-                
-                
-                
-                
-                
-                
-                
+
+                <div class="row">
+                    <div class="col-6 text-left">
+                        <p>ใบขับขี่</p>
+                        <select name="Marque" id="Marque" class="form-control">
+                            <option value="Nonec">รถจักรยานยนต์</option>
+                            <option value="Volvo">รถสิบล้อ</option>
+                            <option value="Saab">รถสามล้อ</option>
+                            <option value="Mercedes">รถยนต์</option>
+                            <option value="Toyota">รถขนส่ง</option>
+                        </select>
+                    </div>
+                    <div class="col-6 text-left">
+                        <p>ชนิด</p>
+                        <select name="province" id="province" class="form-control" required="">
+                            <option value="mag">ชั่วคราว</option>
+                            <option value="chiangmai1">ตลอดชีวิต</option>
+                            <option value="chiangrai1">สาธารณะ</option>
+                            <option value="mercedes1">บุคคล ชนิดที่</option>
+                            <option value="audi1">ทุกประเภท ชนิดที่</option>
+                            <option value="toyota1">ระหว่างประเทศ</option>
+                        </select>
+                    </div>
                 </div>
+                <hr>
+                <p>ข้าพเจ้าผู้ออกใบสั่งฉบับนี้ได้เรียกเก็บใบอนุญาติขับขี่ไว้ และให้ใช้เป็นใบแทนใบอนุญาติขับขี่ได้เป็นการชั่วคราว ไม่เกิน ๗ วัน นับแต่วันที่ออกใบรับแทนใบอนุญาติขับขี่นี้ </p>
+
+                <div class="text-center mt-5">
+                    <h5>ลงชื่อผู้ออกใบสั่ง</h5>
+                    <p>Sidned Traffic Ticket Issuing Officer</p>
+                </div>
+                    <div class="row  mt-">
+    
+                        <div class="col-md-3 md3">
+                            <label for="kk">ยศ</label>
+                            <input type="text" class="form-control" placeholder="Rank">
+                        </div>
+                        <div class="col-md-3 md3">
+                            <label for="Road">ชื่อ</label>
+                            <input type="text" class="form-control" placeholder="Frist Name">
+                        </div>
+                        <div class="col-md-3 md3">
+                            <label for="District">นามสกุล</label>
+                            <input type="text" class="form-control" placeholder="Last Name">
+                        </div>
+                        <div class="col-md-3 md3">
+                            <label for="District">รหัส</label>
+                            <input type="text" class="form-control" placeholder="Code">
+                        </div>
+                    </div>
+    
+                    <hr>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit " id="form">บันทึกข้อมูล</button>
+    
+
+
+
+
+
+
+            </div>
 
 </html>
 </body>
